@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+    <PackageReference Include="itextsharp.pdfa" Version="5.5.13.3" />
+    <PackageReference Include="itextsharp.xtra" Version="5.5.13.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Postex.receipt.Application\Postex.receipt.Application.csproj" />
+    <ProjectReference Include="..\Postex.Receipt.Infrastrucre\Postex.Receipt.Infrastrucre.csproj" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="PDFs\" />
+  </ItemGroup>
+
+</Project>

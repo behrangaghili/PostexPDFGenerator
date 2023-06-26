@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postex.Application", "src\Shared\Postex.Application\Postex.Application.csproj", "{EFB6F10F-66B8-4DA1-AD8C-B363D66DE79C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{0869C2DB-36D3-48E2-90C1-862D8E0D4CAC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postex.Infrastructure", "src\Shared\Postex.Infrastructure\Postex.Infrastructure.csproj", "{11CC6C4E-AAF2-4803-9483-47E30DA6C3FA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postex.SharedKernel", "src\Shared\Postex.SharedKernel\Postex.SharedKernel.csproj", "{AB95F376-CEE5-47DB-9BB5-69CB97A56D92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postex.Receipt", "Postex.Receipt", "{A4E9F4E4-015E-42E5-AC45-561E44F86F77}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postex.Receipt.Api", "src\Postex.Receipt\Postex.Receipt.Api\Postex.Receipt.Api.csproj", "{6FB9F22D-4AC3-4F09-9B45-4B4653FB6E27}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postex.Receipt.Application", "src\Postex.Receipt\Postex.Receipt.Application\Postex.Receipt.Application.csproj", "{196BBDB9-CEE2-44A9-A6BC-F2170AA75A5E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postex.Receipt.Domain", "src\Postex.Receipt\Postex.Receipt.Domain\Postex.Receipt.Domain.csproj", "{A012A9C8-2432-4E3B-A2B1-702618D23448}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postex.Receipt.Infrastrucre", "src\Postex.Receipt\Postex.Receipt.Infrastrucre\Postex.Receipt.Infrastrucre.csproj", "{C5E32AE0-3468-4E67-9AC6-B5C7FA5982EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{23460C6B-E6CD-42BC-9D2C-29E9C5D4A17B}"
+	ProjectSection(SolutionItems) = preProject
+		src\StimulsoftDll\Stimulsoft.Base.dll = src\StimulsoftDll\Stimulsoft.Base.dll
+		src\StimulsoftDll\Stimulsoft.Design.dll = src\StimulsoftDll\Stimulsoft.Design.dll
+		src\StimulsoftDll\Stimulsoft.Report.dll = src\StimulsoftDll\Stimulsoft.Report.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFB6F10F-66B8-4DA1-AD8C-B363D66DE79C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB6F10F-66B8-4DA1-AD8C-B363D66DE79C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB6F10F-66B8-4DA1-AD8C-B363D66DE79C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB6F10F-66B8-4DA1-AD8C-B363D66DE79C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11CC6C4E-AAF2-4803-9483-47E30DA6C3FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11CC6C4E-AAF2-4803-9483-47E30DA6C3FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11CC6C4E-AAF2-4803-9483-47E30DA6C3FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11CC6C4E-AAF2-4803-9483-47E30DA6C3FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB95F376-CEE5-47DB-9BB5-69CB97A56D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB95F376-CEE5-47DB-9BB5-69CB97A56D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB95F376-CEE5-47DB-9BB5-69CB97A56D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB95F376-CEE5-47DB-9BB5-69CB97A56D92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FB9F22D-4AC3-4F09-9B45-4B4653FB6E27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB9F22D-4AC3-4F09-9B45-4B4653FB6E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB9F22D-4AC3-4F09-9B45-4B4653FB6E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB9F22D-4AC3-4F09-9B45-4B4653FB6E27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{196BBDB9-CEE2-44A9-A6BC-F2170AA75A5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{196BBDB9-CEE2-44A9-A6BC-F2170AA75A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{196BBDB9-CEE2-44A9-A6BC-F2170AA75A5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{196BBDB9-CEE2-44A9-A6BC-F2170AA75A5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A012A9C8-2432-4E3B-A2B1-702618D23448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A012A9C8-2432-4E3B-A2B1-702618D23448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A012A9C8-2432-4E3B-A2B1-702618D23448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A012A9C8-2432-4E3B-A2B1-702618D23448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5E32AE0-3468-4E67-9AC6-B5C7FA5982EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5E32AE0-3468-4E67-9AC6-B5C7FA5982EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5E32AE0-3468-4E67-9AC6-B5C7FA5982EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5E32AE0-3468-4E67-9AC6-B5C7FA5982EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EFB6F10F-66B8-4DA1-AD8C-B363D66DE79C} = {0869C2DB-36D3-48E2-90C1-862D8E0D4CAC}
+		{11CC6C4E-AAF2-4803-9483-47E30DA6C3FA} = {0869C2DB-36D3-48E2-90C1-862D8E0D4CAC}
+		{AB95F376-CEE5-47DB-9BB5-69CB97A56D92} = {0869C2DB-36D3-48E2-90C1-862D8E0D4CAC}
+		{6FB9F22D-4AC3-4F09-9B45-4B4653FB6E27} = {A4E9F4E4-015E-42E5-AC45-561E44F86F77}
+		{196BBDB9-CEE2-44A9-A6BC-F2170AA75A5E} = {A4E9F4E4-015E-42E5-AC45-561E44F86F77}
+		{A012A9C8-2432-4E3B-A2B1-702618D23448} = {A4E9F4E4-015E-42E5-AC45-561E44F86F77}
+		{C5E32AE0-3468-4E67-9AC6-B5C7FA5982EA} = {A4E9F4E4-015E-42E5-AC45-561E44F86F77}
+		{23460C6B-E6CD-42BC-9D2C-29E9C5D4A17B} = {A4E9F4E4-015E-42E5-AC45-561E44F86F77}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {102C5CBB-B3A9-401B-9463-12598BB4A608}
+	EndGlobalSection
+EndGlobal

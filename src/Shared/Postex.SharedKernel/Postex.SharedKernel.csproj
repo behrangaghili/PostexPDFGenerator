@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="Endpoint\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="iTextSharp" Version="5.5.13.3" />
+		<PackageReference Include="itextsharp.pdfa" Version="5.5.13.3" />
+		<PackageReference Include="itextsharp.xtra" Version="5.5.13.3" />
+		<PackageReference Include="MediatR" Version="10.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+		<PackageReference Include="Ardalis.Specification" Version="6.0.0" />
+		<PackageReference Include="MediatR.Extensions.FluentValidation.AspNetCore" Version="2.0.0" />
+		<PackageReference Include="Stimulsoft.Reports.Engine" Version="2023.2.7" />
+		<PackageReference Include="Stimulsoft.Reports.Engine.NetCore" Version="2023.2.7" />
+		<PackageReference Include="Stimulsoft.Reports.Web.NetCore" Version="2023.2.7" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.3.0" />
+	</ItemGroup>
+
+</Project>

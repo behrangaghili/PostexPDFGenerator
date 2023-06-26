@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+    <PackageReference Include="itextsharp.pdfa" Version="5.5.13.3" />
+    <PackageReference Include="itextsharp.xtra" Version="5.5.13.3" />
+    <PackageReference Include="Stimulsoft.Reports.Engine" Version="2023.2.7" />
+    <PackageReference Include="Stimulsoft.Reports.Engine.NetCore" Version="2023.2.7" />
+    <PackageReference Include="Stimulsoft.Reports.Web.NetCore" Version="2023.2.7" />
+  </ItemGroup>
+
+</Project>
