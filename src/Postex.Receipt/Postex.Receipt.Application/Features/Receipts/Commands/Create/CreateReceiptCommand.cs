@@ -1,8 +1,10 @@
-﻿using Postex.receipt.Application.Contracts;
+﻿using MediatR;
+using Postex.receipt.Application.Contracts;
+using Postex.Receipt.Application;
 
 namespace Postex.receipt.Application
 {
-    public class CreateReceiptCommand : ITransactionRequest<byte[]>
+    public class CreateReceiptCommand : IRequest<PdfFileResponse>
     {
         //public string? BarcodeImage { get; set; }
         //public string? BarcodeNo { get; set; }

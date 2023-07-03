@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Postex.receipt.Application;
+using Postex.Receipt.Domain.Models;
 
 namespace Postex.receipt.Api.Controllers.V1
 {
@@ -16,12 +17,15 @@ namespace Postex.receipt.Api.Controllers.V1
         }
 
         // POST: api/BarcodeReceipt
+        //use: dotnet dev-certs https --trust   to not get SSl Certificate error 
         [HttpPost]
-        public async Task<ActionResult<byte[]>> GenerateBarcodePdf()
+        public async Task<IActionResult> GenerateBarcodePdf()
         {
-            var pdfBytes = await _mediator.Send(new CreateReceiptCommand());
+            var pdfResponse = await _mediator.Send(new CreateReceiptCommand());
 
-            return File(pdfBytes, "application/pdf");
+            return File(pdfResponse.FileContent, pdfResponse.ContentType, pdfResponse.FileName);
         }
+
+
     }
 }

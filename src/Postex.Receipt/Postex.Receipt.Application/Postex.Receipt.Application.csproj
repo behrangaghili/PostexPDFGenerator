@@ -23,7 +23,6 @@
 
   <ItemGroup>
     <Folder Include="Features\Cities\Commands\Update\" />
-    <Folder Include="Features\Receipts\Commands\Create\PDF\" />
     <Folder Include="Reports\" />
   </ItemGroup>
 
