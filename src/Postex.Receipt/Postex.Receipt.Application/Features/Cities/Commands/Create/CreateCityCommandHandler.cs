@@ -1,14 +1,8 @@
 ﻿using AutoMapper;
 using MediatR;
-using Postex.SharedKernel.Interfaces;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Postex.receipt.Application.Dtos;
 using Postex.receipt.Domain.Models;
+using Postex.SharedKernel.Interfaces;
 
 namespace Postex.receipt.Application.Features.Cities.Commands.Create
 {
@@ -23,7 +17,7 @@ namespace Postex.receipt.Application.Features.Cities.Commands.Create
             _mapper = mapper;
         }
 
-       
+
 
         async Task<CityDto> IRequestHandler<CreateCityCommand, CityDto>.Handle(CreateCityCommand request, CancellationToken cancellationToken)
         {

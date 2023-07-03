@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Postex.receipt.Application.Dtos
+﻿namespace Postex.receipt.Application.Dtos
 {
     public class CityDto
     {

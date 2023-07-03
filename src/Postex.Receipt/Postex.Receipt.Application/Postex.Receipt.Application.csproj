@@ -11,12 +11,10 @@
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="DinkToPdf" Version="1.0.8" />
-    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
-    <PackageReference Include="itextsharp.pdfa" Version="5.5.13.3" />
-    <PackageReference Include="itextsharp.xtra" Version="5.5.13.3" />
-    <PackageReference Include="MediatR" Version="12.0.1" />
+    <PackageReference Include="MediatR" Version="11.1.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
+    <PackageReference Include="Unity" Version="5.11.10" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,7 +23,7 @@
 
   <ItemGroup>
     <Folder Include="Features\Cities\Commands\Update\" />
-    <Folder Include="Fonts\" />
+    <Folder Include="Features\Receipts\Commands\Create\PDF\" />
     <Folder Include="Reports\" />
   </ItemGroup>
 
@@ -39,6 +37,21 @@
     <Reference Include="Stimulsoft.Report">
       <HintPath>..\Libraries\Stimulsoft.Report.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Features\Receipts\Commands\Create\ReportTemplate1.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Service\libwkhtmltox.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Helper\libwkhtmltox.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Service\ReportTemplate.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -21,13 +21,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postex.Receipt.Domain", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postex.Receipt.Infrastrucre", "src\Postex.Receipt\Postex.Receipt.Infrastrucre\Postex.Receipt.Infrastrucre.csproj", "{C5E32AE0-3468-4E67-9AC6-B5C7FA5982EA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{23460C6B-E6CD-42BC-9D2C-29E9C5D4A17B}"
-	ProjectSection(SolutionItems) = preProject
-		src\StimulsoftDll\Stimulsoft.Base.dll = src\StimulsoftDll\Stimulsoft.Base.dll
-		src\StimulsoftDll\Stimulsoft.Design.dll = src\StimulsoftDll\Stimulsoft.Design.dll
-		src\StimulsoftDll\Stimulsoft.Report.dll = src\StimulsoftDll\Stimulsoft.Report.dll
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,7 +67,6 @@ Global
 		{196BBDB9-CEE2-44A9-A6BC-F2170AA75A5E} = {A4E9F4E4-015E-42E5-AC45-561E44F86F77}
 		{A012A9C8-2432-4E3B-A2B1-702618D23448} = {A4E9F4E4-015E-42E5-AC45-561E44F86F77}
 		{C5E32AE0-3468-4E67-9AC6-B5C7FA5982EA} = {A4E9F4E4-015E-42E5-AC45-561E44F86F77}
-		{23460C6B-E6CD-42BC-9D2C-29E9C5D4A17B} = {A4E9F4E4-015E-42E5-AC45-561E44F86F77}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {102C5CBB-B3A9-401B-9463-12598BB4A608}

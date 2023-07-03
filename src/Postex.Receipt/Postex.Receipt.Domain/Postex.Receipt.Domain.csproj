@@ -9,9 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="DinkToPdf" Version="1.0.8" />
-    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
-    <PackageReference Include="itextsharp.pdfa" Version="5.5.13.3" />
-    <PackageReference Include="itextsharp.xtra" Version="5.5.13.3" />
+    <PackageReference Include="Unity" Version="5.11.10" />
   </ItemGroup>
 
   <ItemGroup>

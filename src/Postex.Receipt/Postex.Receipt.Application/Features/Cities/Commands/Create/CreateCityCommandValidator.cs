@@ -8,7 +8,7 @@ namespace Postex.receipt.Application.Features.Cities.Commands.Create
         {
             RuleFor(p => p.CityName)
                   .NotEmpty().WithMessage(" نام شهر الزامی میباشد");
-           
+
         }
     }
 }

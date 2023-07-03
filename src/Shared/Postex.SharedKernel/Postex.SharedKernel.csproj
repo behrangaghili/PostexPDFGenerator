@@ -12,9 +12,6 @@
 
 	<ItemGroup>
 		<PackageReference Include="DinkToPdf" Version="1.0.8" />
-		<PackageReference Include="iTextSharp" Version="5.5.13.3" />
-		<PackageReference Include="itextsharp.pdfa" Version="5.5.13.3" />
-		<PackageReference Include="itextsharp.xtra" Version="5.5.13.3" />
 		<PackageReference Include="MediatR" Version="10.0.1" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.1" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
@@ -22,10 +19,8 @@
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 		<PackageReference Include="Ardalis.Specification" Version="6.0.0" />
 		<PackageReference Include="MediatR.Extensions.FluentValidation.AspNetCore" Version="2.0.0" />
-		<PackageReference Include="Stimulsoft.Reports.Engine" Version="2023.2.7" />
-		<PackageReference Include="Stimulsoft.Reports.Engine.NetCore" Version="2023.2.7" />
-		<PackageReference Include="Stimulsoft.Reports.Web.NetCore" Version="2023.2.7" />
 		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.3.0" />
+		<PackageReference Include="Unity" Version="5.11.10" />
 	</ItemGroup>
 
 </Project>

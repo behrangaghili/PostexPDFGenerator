@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "I_sans_num";
+  src: url("../../fonts/IRANSansNum.ttf") format("truetype");
+}
+@font-face {
+  font-family: "I_sans_medium";
+  src: url("../../fonts/IranSans/medium/IRANSans.ttf") format("truetype"), url("../../fonts/IranSans/medium/IRANSans.woff") format("woff"), url("../../fonts/IranSans/medium/IRANSans.woff2") format("woff2");
+}
+@font-face {
+  font-family: "I_sans_regular";
+  src: url("../../fonts/IranSans/regular/IRANSans.ttf") format("truetype"), url("../../fonts/IranSans/regular/IRANSans.eot") format("eot"), url("../../fonts/IranSans/regular/IRANSans.woff") format("woff"), url("../../fonts/IranSans/regular/IRANSans.woff2") format("woff2");
+}
+@font-face {
+  font-family: "I_sans_bold";
+  src: url("../../fonts/IranSans/bold/IRANSans.ttf") format("truetype"), url("../../fonts/IranSans/bold/IRANSans.eot") format("eot"), url("../../fonts/IranSans/bold/IRANSans.woff") format("woff"), url("../../fonts/IranSans/bold/IRANSans.woff2") format("woff2");
+}
+@font-face {
+  font-family: "I_sans_light";
+  src: url("../../fonts/IranSans/light/IRANSans.ttf") format("truetype"), url("../../fonts/IranSans/light/IRANSans.eot") format("eot"), url("../../fonts/IranSans/light/IRANSans.woff") format("woff"), url("../../fonts/IranSans/light/IRANSans.woff2") format("woff2");
+}
+::-moz-selection { /* Code for Firefox */
+  color: #ffffff;
+  background: #F7941D;
+}
+
+::selection {
+  color: #ffffff;
+  background: #F7941D;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+}
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #F7941D;
+  border-radius: 10px;
+}
+
+p {
+  margin-bottom: 5px !important;
+  font-family: "I_sans_medium", sans-serif;
+  color: #333333;
+  font-size: 10px;
+}
+@media (max-width: 552px) {
+  p {
+    font-size: 8px;
+  }
+}
+
+span, a, label {
+  font-family: "I_sans_regular", sans-serif;
+  text-align: right;
+  color: #555555;
+  font-size: 8px;
+}
+@media (max-width: 552px) {
+  span, a, label {
+    font-size: 6px;
+  }
+}
+
+table {
+  font-family: "I_sans_regular", sans-serif;
+  font-size: 10px;
+  margin-bottom: 6px !important;
+}
+@media (max-width: 552px) {
+  table {
+    font-size: 6px;
+  }
+}
+table thead tr th {
+  background: #cccccc !important;
+  padding: 2px !important;
+}
+table tbody tr th, table tfoot tr th {
+  padding: 2px !important;
+}
+table tbody tr td, table tfoot tr td {
+  padding: 2px !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "I_sans_medium", sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+label {
+  text-align: right;
+}
+
+button {
+  font-family: "I_sans_regular", sans-serif !important;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: right;
+  font-family: "I_sans_regular", sans-serif !important;
+}
+input::placeholder {
+  font-family: "I_sans_regular", sans-serif;
+}
+
+.detail-row {
+  display: flex;
+}
+.detail-row p {
+  white-space: nowrap;
+  margin-bottom: 0 !important;
+  font-size: 8px;
+}
+.detail-row span {
+  margin-inline: 5px;
+  font-size: 6px;
+}
+
+.bordered {
+  border: 1px solid #666666;
+  padding: 6px;
+}
+
+.template {
+  padding: 20px 0;
+}
+.template .header {
+  margin-bottom: 6px;
+}
+.template .header .col-4 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.template .header .col-4:nth-child(2) {
+  align-items: center;
+}
+.template .header .col-4:nth-child(3) {
+  display: flex;
+  align-items: flex-end;
+}
+.template .header .col-4 .img {
+  width: 80px;
+}
+.template .header .col-4 .img img {
+  width: 100%;
+}
+@media (max-width: 552px) {
+  .template .header .col-4 .img {
+    width: 60px;
+  }
+}
+.template .body .attention {
+  margin-bottom: 6px;
+}
+.template .body .barcode {
+  margin-top: 6px;
+}
+.template .body .barcode .temp {
+  margin-bottom: 6px;
+}
+.template .body .table-view {
+  margin-top: 6px;
+}
+.template .body .table-view .title {
+  display: flex;
+  margin-bottom: 6px;
+}
+.template .body .table-view .title .detail-row {
+  margin-inline: 10px;
+}
+
+/*# sourceMappingURL=main.css.map */

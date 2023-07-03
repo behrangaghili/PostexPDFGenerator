@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -8,15 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="DinkToPdf" Version="1.0.8" />
-    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
-    <PackageReference Include="itextsharp.pdfa" Version="5.5.13.3" />
-    <PackageReference Include="itextsharp.xtra" Version="5.5.13.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Unity" Version="5.11.10" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +25,15 @@
 
   <ItemGroup>
     <Folder Include="PDFs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="libwkhtmltox.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ReportTemplate.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

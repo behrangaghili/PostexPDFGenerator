@@ -1,9 +1,11 @@
+using DinkToPdf;
+using DinkToPdf.Contracts;
+using MediatR;
 using Microsoft.OpenApi.Models;
 using Postex.receipt.Application.Configuration;
 using Postex.receipt.Infrastrucre.Configuration;
-using Serilog;
 using Postex.Receipt.Application;
-using Postex.receipt.Domain;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,11 +22,18 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-// Inject the API code here
-builder.Services.AddScoped<IInvoiceService, InvoiceService>();
-//builder.Services.AddHttpClient<IInvoiceApiClient, InvoiceApiClient>();
-// Add any other dependencies needed by the API code
 
+
+// Inject the API code here
+
+//builder.Services.AddScoped<ServiceContainerResolver>();
+//builder.Services.AddScoped<IServiceCollection, ServiceCollection>();
+//builder.Services.AddScoped<IMediator, Mediator>();
+
+//builder.Services.AddScoped<GenerateBarcodePdfResponse>();
+
+// Add converter to DI
+//builder.Services.AddSingleton(typeof(IConverter), new STASynchronizedConverter(new PdfTools()));
 builder.Services.AddPersistance(builder.Configuration);
 builder.Services.AddApplicationCore(builder.Configuration);
 
@@ -39,6 +48,7 @@ Log.Logger = new LoggerConfiguration()
 builder.Host.UseSerilog();
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -57,3 +67,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+

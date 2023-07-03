@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
+﻿using DinkToPdf;
+using DinkToPdf.Contracts;
 using Postex.Receipt.Domain.Models;
+using System.Text;
 
 namespace Postex.Receipt.Application
 {
@@ -14,51 +12,84 @@ namespace Postex.Receipt.Application
 
     public class InvoiceService : IInvoiceService
     {
+        private readonly IConverter _converter;
+
+        public InvoiceService(IConverter converter)
+        {
+            _converter = converter;
+        }
+
         public async Task<byte[]> GenerateInvoicesPdfAsync(List<Invoice> invoices)
         {
-            using (var document = new Document())
+            var converter = new BasicConverter(new PdfTools());
+            var htmlContent = GenerateHtmlContent(invoices);
+
+            var doc = new HtmlToPdfDocument()
             {
-                using (var stream = new MemoryStream())
+                GlobalSettings =
                 {
-                    using (var writer = PdfWriter.GetInstance(document, stream))
+                    ColorMode = ColorMode.Color,
+                    Orientation = Orientation.Portrait,
+                    PaperSize = PaperKind.A4,
+                },
+                Objects =
+                {
+                    new ObjectSettings
                     {
-                        document.Open();
-
-                        foreach (var invoice in invoices)
-                        {
-                            AddInvoiceContent(document, invoice);
-                        }
-
-                        document.Close();
+                        HtmlContent = htmlContent,
                     }
-
-                    return stream.ToArray();
                 }
-            }
+            };
+
+            var pdfBytes = _converter.Convert(doc);
+
+            return pdfBytes;
         }
 
-        private void AddInvoiceContent(Document document, Invoice invoice)
+        private string GenerateHtmlContent(List<Invoice> invoices)
         {
-            // Create a table to hold the invoice details
-            PdfPTable table = new PdfPTable(2); // 2 columns
-            table.WidthPercentage = 100;
+            // Start building the HTML content
+            var htmlBuilder = new StringBuilder();
 
-            // Add the invoice details to the table
-            table.AddCell("Invoice ID:");
-            table.AddCell(invoice.OrderId.ToString());
+            // Add HTML header
+            htmlBuilder.AppendLine("<html>");
+            htmlBuilder.AppendLine("<head>");
+            htmlBuilder.AppendLine("<style>");
+            htmlBuilder.AppendLine("table { width: 100%; border-collapse: collapse; }");
+            htmlBuilder.AppendLine("th, td { border: 1px solid black; padding: 8px; }");
+            htmlBuilder.AppendLine("</style>");
+            htmlBuilder.AppendLine("</head>");
+            htmlBuilder.AppendLine("<body>");
 
-            table.AddCell("Product:");
-            table.AddCell(invoice.ProductName);
+            // Add a table to hold the invoice details
+            htmlBuilder.AppendLine("<table>");
 
-            table.AddCell("Price:");
-            table.AddCell(invoice.ProductPrice.ToString());
+            // Add table header row
+            htmlBuilder.AppendLine("<tr>");
+            htmlBuilder.AppendLine("<th>Invoice ID</th>");
+            htmlBuilder.AppendLine("<th>Product</th>");
+            htmlBuilder.AppendLine("<th>Price</th>");
+            htmlBuilder.AppendLine("<th>Recipient</th>");
+            htmlBuilder.AppendLine("</tr>");
 
-            table.AddCell("Recipient:");
-            table.AddCell(invoice.ReciverFullName);
+            // Add table rows for each invoice
+            foreach (var invoice in invoices)
+            {
+                htmlBuilder.AppendLine("<tr>");
+                htmlBuilder.AppendLine($"<td>{invoice.OrderId}</td>");
+                htmlBuilder.AppendLine($"<td>{invoice.ProductName}</td>");
+                htmlBuilder.AppendLine($"<td>{invoice.ProductPrice}</td>");
+                htmlBuilder.AppendLine($"<td>{invoice.ReciverFullName}</td>");
+                htmlBuilder.AppendLine("</tr>");
+            }
 
-            // Add the table to the document
-            document.Add(table);
+            // Close the table and body
+            htmlBuilder.AppendLine("</table>");
+            htmlBuilder.AppendLine("</body>");
+            htmlBuilder.AppendLine("</html>");
+
+            // Return the generated HTML content
+            return htmlBuilder.ToString();
         }
-
     }
 }

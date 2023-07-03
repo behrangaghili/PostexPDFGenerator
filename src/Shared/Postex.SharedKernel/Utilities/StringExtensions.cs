@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Postex.SharedKernel.Utilities
+﻿namespace Postex.SharedKernel.Utilities
 {
     public static class StringExtensions
     {

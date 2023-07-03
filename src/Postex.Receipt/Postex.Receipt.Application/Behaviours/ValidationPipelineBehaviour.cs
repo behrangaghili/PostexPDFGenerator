@@ -1,10 +1,5 @@
 ﻿using FluentValidation;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Postex.receipt.Application.Behaviours
 {
@@ -23,10 +18,10 @@ namespace Postex.receipt.Application.Behaviours
                 return next();
             var context = new ValidationContext<TRequest>(request);
             var errors = _validators
-                .Select(x=> x.Validate(context))
-                .Where(t=> t.Errors is not null )
-                .SelectMany(t=> t.Errors )
-                .DistinctBy(t=> t.ErrorMessage
+                .Select(x => x.Validate(context))
+                .Where(t => t.Errors is not null)
+                .SelectMany(t => t.Errors)
+                .DistinctBy(t => t.ErrorMessage
                 .ToList());
             if (errors.Any())
             {
