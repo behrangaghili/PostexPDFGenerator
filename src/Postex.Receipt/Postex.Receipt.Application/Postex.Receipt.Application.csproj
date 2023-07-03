@@ -43,13 +43,7 @@
     <None Update="Features\Receipts\Commands\Create\ReportTemplate1.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Service\libwkhtmltox.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Helper\libwkhtmltox.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Service\ReportTemplate.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

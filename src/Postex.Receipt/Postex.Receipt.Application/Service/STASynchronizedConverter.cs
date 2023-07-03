@@ -18,6 +18,7 @@ public class STASynchronizedConverter : BasicConverter
     public override byte[] Convert(IDocument document)
     {
         return Invoke(() => base.Convert(document));
+
     }
 
     public TResult Invoke<TResult>(Func<TResult> @delegate)

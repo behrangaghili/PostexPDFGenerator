@@ -59,9 +59,7 @@ namespace Postex.Infrastructure.Swagger
                 new string[] {}
                 }
                 });
-                //var xmlDocPath = Path.Combine(AppContext.BaseDirectory, "MyApi.xml");
-                ////show controller XML comments like summary
-                //options.IncludeXmlComments(xmlDocPath, true);
+
 
                 options.EnableAnnotations();
 

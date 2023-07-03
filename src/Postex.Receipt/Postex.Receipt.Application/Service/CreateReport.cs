@@ -1,33 +1,26 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
+using System.IO;
 
-namespace Postex.Receipt.Application.Service
+namespace Postex.Receipt.Application
 {
-   
     public class CreateReport
     {
-       public async  void Create()
+        private readonly UnityContainerResolver _resolver;
+        private readonly IHttpClientFactory _httpClientFactory;
+        private readonly IReportService _service;
+
+        public CreateReport(UnityContainerResolver resolver, IHttpClientFactory httpClientFactory, IReportService service)
         {
-            UnityContainerResolver resolver;
-            EmployeeViewModel model;
-            string template;
-            string reportPath;
-            string templatePath;
-            WebClient webClient;
-            IReportService service;
-            byte[] rptBytes;
+            _resolver = resolver;
+            _httpClientFactory = httpClientFactory;
+            _service = service;
+        }
 
-            webClient = new WebClient();
-            model = new EmployeeViewModel();
-            resolver = new UnityContainerResolver();
+        public async Task Create()
+        {
+            EmployeeViewModel model = new EmployeeViewModel();
 
-            //set model values
+            // Set model values
             model.Employee.EmpID = 100005;
             model.Employee.EmpName = "John Doe";
             model.Employee.EmpStatus = "Married";
@@ -45,11 +38,13 @@ namespace Postex.Receipt.Application.Service
                 DepName = "Janet Mills"
             });
 
-            //get template source
-            templatePath = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "ReportTemplate.html");
-            template = webClient.DownloadString(templatePath);
+            // Get template source
+            string templatePath = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "ReportTemplate.html");
+            HttpClient httpClient = _httpClientFactory.CreateClient();
+            //string template = await httpClient.GetStringAsync(templatePath);
+            string template = File.ReadAllText(templatePath);
 
-            //replace template tokens with values from model
+            // Replace template tokens with values from model
             if (!string.IsNullOrEmpty(template))
             {
                 template = template.Replace("[EmpID]", model.Employee.EmpID.ToString());
@@ -64,14 +59,20 @@ namespace Postex.Receipt.Application.Service
                 }
             }
 
-            //generate the pdf report
-            service = resolver.Resolver();
-            rptBytes = await service.DocumentService.GeneratePdfReport(template);
-            reportPath = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "EmployeeReport.pdf");
+            // Generate the PDF report
+            byte[] rptBytes = await _service.DocumentService.GeneratePdfReport(template);
 
-            //save report
+            // Save the report
+            string reportPath = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "EmployeeReport.pdf");
             File.WriteAllBytes(reportPath, rptBytes);
-           
+
+        }
+
+        public byte[] GetReportBytes()
+        {
+            // Load the generated PDF report bytes from the saved file
+            string reportPath = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "EmployeeReport.pdf");
+            return File.ReadAllBytes(reportPath);
         }
     }
 }

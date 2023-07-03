@@ -1,15 +1,26 @@
-using DinkToPdf;
 using DinkToPdf.Contracts;
-using MediatR;
+using DinkToPdf;
 using Microsoft.OpenApi.Models;
 using Postex.receipt.Application.Configuration;
 using Postex.receipt.Infrastrucre.Configuration;
 using Postex.Receipt.Application;
 using Serilog;
 
-var builder = WebApplication.CreateBuilder(args);
 
+var builder = WebApplication.CreateBuilder(args);
+// Add the registration for UnityContainerResolver
+builder.Services.AddSingleton<UnityContainerResolver>();
+// Add the registration for CreateReport
+builder.Services.AddScoped<CreateReport>();
 builder.Services.AddControllers();
+builder.Services.AddHttpClient();
+builder.Services.AddSingleton<HttpClient>();
+builder.Services.AddScoped<IReportService, ReportService>();
+builder.Services.AddScoped<IDocumentService, DocumentService>();
+builder.Services.AddSingleton<IConverter>(new SynchronizedConverter(new PdfTools()));
+
+
+
 
 builder.Services.AddEndpointsApiExplorer();
 
@@ -24,16 +35,6 @@ builder.Services.AddSwaggerGen(c =>
 
 
 
-// Inject the API code here
-
-//builder.Services.AddScoped<ServiceContainerResolver>();
-//builder.Services.AddScoped<IServiceCollection, ServiceCollection>();
-//builder.Services.AddScoped<IMediator, Mediator>();
-
-//builder.Services.AddScoped<GenerateBarcodePdfResponse>();
-
-// Add converter to DI
-//builder.Services.AddSingleton(typeof(IConverter), new STASynchronizedConverter(new PdfTools()));
 builder.Services.AddPersistance(builder.Configuration);
 builder.Services.AddApplicationCore(builder.Configuration);
 
@@ -60,6 +61,7 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

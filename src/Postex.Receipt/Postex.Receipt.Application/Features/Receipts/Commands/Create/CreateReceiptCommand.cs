@@ -1,10 +1,8 @@
 ﻿using Postex.receipt.Application.Contracts;
-using Postex.receipt.Application.Dtos;
-using Postex.Receipt.Application;
 
 namespace Postex.receipt.Application
 {
-    public class CreateReceiptCommand : ITransactionRequest<string>
+    public class CreateReceiptCommand : ITransactionRequest<byte[]>
     {
         //public string? BarcodeImage { get; set; }
         //public string? BarcodeNo { get; set; }
