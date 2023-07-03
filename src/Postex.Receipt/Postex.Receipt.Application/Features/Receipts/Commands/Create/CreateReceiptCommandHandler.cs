@@ -21,11 +21,13 @@ namespace Postex.Receipt.Application
 
             // Get the byte array of the generated PDF report
             byte[] reportBytes = _createReport.GetReportBytes();
-
-            var fileName = "BarcodeReceipt.pdf";
+            var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
+            var orderID = request.BarcodeNo;
+            var fileName = $"Receipt_{timestamp}_{orderID}.pdf";
             var contentType = "application/pdf";
-
             var folderPath = Path.Combine(_webHostEnvironment.ContentRootPath, "PDFs");
+
+
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
