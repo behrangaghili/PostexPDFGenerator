@@ -18,6 +18,7 @@ namespace Postex.Receipt.Application
             headerSettings = new HeaderSettings();
             footerSettings = new FooterSettings();
             globalSettings = new GlobalSettings();
+
             _converter = converter;
         }
 
@@ -40,6 +41,7 @@ namespace Postex.Receipt.Application
         private GlobalSettings GetGlobalSettings()
         {
             globalSettings.ColorMode = ColorMode.Color;
+          
             globalSettings.Orientation = Orientation.Portrait;
             globalSettings.PaperSize = PaperKind.Letter;
             globalSettings.Margins = new MarginSettings { Top = 1, Bottom = 1, Left = .5, Right = .5, Unit = Unit.Inches };
@@ -69,7 +71,7 @@ namespace Postex.Receipt.Application
             headerSettings.FontSize = 6;
             headerSettings.FontName = "Times New Roman";
             headerSettings.Right = "Page [page] of [toPage]";
-            headerSettings.Left = "XYZ Company Inc.";
+            headerSettings.Left = "پستکس";
             headerSettings.Line = true;
 
             return headerSettings;

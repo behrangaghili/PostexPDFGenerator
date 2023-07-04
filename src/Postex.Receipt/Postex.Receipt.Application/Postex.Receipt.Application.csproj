@@ -19,11 +19,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Postex.receipt.Domain\Postex.receipt.Domain.csproj" />
+    <ProjectReference Include="..\Postex.Receipt.Infrastrucre\Postex.Receipt.Infrastrucre.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Cities\Commands\Update\" />
-    <Folder Include="Reports\" />
+    <Folder Include="Mapping\" />
+    <Folder Include="Model\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,9 +40,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Features\Receipts\Commands\Create\ReportTemplate1.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Helper\libwkhtmltox.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

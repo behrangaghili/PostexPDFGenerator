@@ -8,20 +8,11 @@ using Serilog;
 
 
 var builder = WebApplication.CreateBuilder(args);
-// Add the registration for UnityContainerResolver
-builder.Services.AddSingleton<UnityContainerResolver>();
-// Add the registration for CreateReport
-builder.Services.AddScoped<CreateReport>();
+
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
 builder.Services.AddSingleton<HttpClient>();
-builder.Services.AddScoped<IReportService, ReportService>();
-builder.Services.AddScoped<IDocumentService, DocumentService>();
 builder.Services.AddSingleton<IConverter>(new SynchronizedConverter(new PdfTools()));
-
-
-
-
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(c =>
@@ -63,8 +54,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseStaticFiles();
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.MapControllers();
 

@@ -1,44 +1,21 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Hosting;
-using Postex.receipt.Application;
+using Microsoft.AspNetCore.Mvc;
+using Postex.Receipt.Application;
 
-namespace Postex.Receipt.Application
+namespace Postex.receipt.Application
 {
-    public class CreateReceiptCommandHandler : IRequestHandler<CreateReceiptCommand, PdfFileResponse>
+    public class CreateReceiptCommandHandler : IRequestHandler<CreateReceiptCommand, string>
     {
-        private readonly CreateReport _createReport;
-        private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IReceiptCreator _createReport;
 
-        public CreateReceiptCommandHandler(CreateReport createReport, IWebHostEnvironment webHostEnvironment)
+        public CreateReceiptCommandHandler(IReceiptCreator createReport)
         {
             _createReport = createReport;
-            _webHostEnvironment = webHostEnvironment;
         }
 
-        public async Task<PdfFileResponse> Handle(CreateReceiptCommand request, CancellationToken cancellationToken)
+        public Task<string> Handle(CreateReceiptCommand request, CancellationToken cancellationToken)
         {
-            await _createReport.Create();
-
-            // Get the byte array of the generated PDF report
-            byte[] reportBytes = _createReport.GetReportBytes();
-            var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
-            var orderID = request.BarcodeNo;
-            var fileName = $"Receipt_{timestamp}_{orderID}.pdf";
-            var contentType = "application/pdf";
-            var folderPath = Path.Combine(_webHostEnvironment.ContentRootPath, "PDFs");
-
-
-            if (!Directory.Exists(folderPath))
-            {
-                Directory.CreateDirectory(folderPath);
-            }
-
-            var filePath = Path.Combine(folderPath, fileName);
-            File.WriteAllBytes(filePath, reportBytes);
-
-            var fileUrl = Path.Combine("/PDFs", fileName);
-
-            return new PdfFileResponse(fileUrl, fileName, contentType, reportBytes);
+            return _createReport.CreatePdfFile(request.ReceiptModels);
         }
     }
 }

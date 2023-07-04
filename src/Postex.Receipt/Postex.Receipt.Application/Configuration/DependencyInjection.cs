@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Postex.receipt.Application.Behaviours;
+using Postex.Receipt.Application;
 using System.Reflection;
 
 namespace Postex.receipt.Application.Configuration
@@ -18,7 +19,9 @@ namespace Postex.receipt.Application.Configuration
             services.AddValidatorsFromAssembly(assembly);
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationPipelineBehaviour<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(TransactionPipelineBehaviour<,>));
-
+            services.AddTransient<IReceiptCreator, ReceiptCreator>();
+            services.AddTransient<IDocumentService, DocumentService>();
+            
             return services;
         }
     }

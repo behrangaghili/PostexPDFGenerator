@@ -2,30 +2,31 @@
 using Microsoft.AspNetCore.Mvc;
 using Postex.receipt.Application;
 using Postex.Receipt.Domain.Models;
+using Postex.Receipt.Infrastrucre;
 
-namespace Postex.receipt.Api.Controllers.V1
+namespace Postex.Receipt.Api.Controllers.V1
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class PDFController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly IWebHostEnvironment _env;
 
-        public PDFController(IMediator mediator)
+        public PDFController(IMediator mediator, IWebHostEnvironment env)
         {
             _mediator = mediator;
+            _env = env;
         }
 
-        // POST: api/BarcodeReceipt
-        //use: dotnet dev-certs https --trust   to not get SSl Certificate error 
         [HttpPost]
-        public async Task<IActionResult> GenerateBarcodePdf()
+        public async Task<IActionResult> GenerateBarcodePdf([FromBody] List<CreateReceiptModel> models)
         {
-            var pdfResponse = await _mediator.Send(new CreateReceiptCommand());
-
-            return File(pdfResponse.FileContent, pdfResponse.ContentType, pdfResponse.FileName);
+            var command = new CreateReceiptCommand(models);
+            var pdfFile = await _mediator.Send(command);
+            var content=System.IO.File.ReadAllBytes(FileUtilities.GetPhysicalPath(pdfFile));
+            return File(content, "application/pdf", "post-receipt.pdf");
+            //return PhysicalFile(Path.Combine(_env.ContentRootPath,pdfFile), "application/pdf","post-receipt.pdf");
         }
-
-
     }
 }
