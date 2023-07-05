@@ -29,11 +29,6 @@ namespace Postex.Receipt.Application
             return path;
         }
 
-        /// <summary>
-        /// Save pdf file on the disk
-        /// </summary>
-        /// <param name="content"></param>
-        /// <returns></returns>
         private string SavePdfFile(byte[] content)
         {
             var now = DateTime.Now;

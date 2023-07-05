@@ -5,15 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>پست</title>
 	
-<!--	<link href="./style/scss/main.css" type="text/css" rel="stylesheet">-->
-	<link href="./style/bootstrap/bootstrap.min.css" type="text/css" rel="stylesheet">
-	<link href="./style/bootstrap/bootstrap-grid.min.css" type="text/css" rel="stylesheet">
-	<link href="./style/bootstrap/bootstrap-grid.rtl.min.css" type="text/css" rel="stylesheet">
-	<link href="./style/bootstrap/bootstrap-reboot.min.css" type="text/css" rel="stylesheet">
-	<link href="./style/bootstrap/bootstrap-reboot.rtl.min.css" type="text/css" rel="stylesheet">
-	<link href="./style/bootstrap/bootstrap-utilities.min.css" type="text/css" rel="stylesheet">
-	<link href="./style/bootstrap/bootstrap-utilities.rtl.min.css" type="text/css" rel="stylesheet">
-	
 	<style type="text/css">
 		/*----- global -----*/
 		::-moz-selection{ /* Code for Firefox */
@@ -110,7 +101,7 @@
 			font-family: "I_sans_medium", sans-serif;
 			color: #333333;
 			font-size: 10px;
-
+			margin-top: 0;
 		}
 
 		span, a, label{
@@ -123,29 +114,32 @@
 
 		table{
 			font-family: "I_sans_regular", sans-serif;
-			font-size: 10px;
+			font-size: 8px;
 			margin-bottom: 6px !important;
+			width: 100%;
+			text-align: center;
+			/*margin-inline: 6px;*/
 		}
 
 		table thead tr th{
 			background: #cccccc !important;
-			padding: 2px !important;
+			padding: 1px !important;
 		}
 
 		table tbody tr th{
-			padding: 2px !important;
+			padding: 1px !important;
 		}
 
 		table tbody tr td{
-			padding: 2px !important;
+			padding: 1px !important;
 		}
 		
 		table tfoot tr th{
-			padding: 2px !important;
+			padding: 1px !important;
 		}
 
 		table tfoot tr td{
-			padding: 2px !important;
+			padding: 1px !important;
 		}
 
 		h1, h2, h3, h4, h5, h6{
@@ -178,9 +172,35 @@
 			font-family: "I_sans_regular", sans-serif;
 		}
 
+		.row{
+			display: flex;
+		}
+	
+		.col{
+			width: 100%;
+			margin-inline: 6px;
+			margin-bottom: 6px;
+		}
+		
+		.row .col-12{
+			width: 100%;
+			margin-inline: 6px;
+			margin-bottom: 6px;
+		}
+		.row .col-6{
+			width: 100%;
+			margin-inline: 6px;
+			margin-bottom: 6px;
+		}
+		.row .col-4{
+			width: 100%;
+			margin-inline: 6px;
+			margin-bottom: 6px;
+		}
 
 		.detail-row{
 			display: flex;
+			align-items: center;
 		}
 
 		.detail-row p{
@@ -196,12 +216,14 @@
 
 		.title-big-row {
 			display: flex;
+			align-items: center;
 		}
 
 		.title-big-row p {
 			white-space: nowrap;
 			margin-bottom: 0 !important;
 			font-size: 12px;
+			margin-top: 0;
 		}
 		.title-big-row 	span {
 			margin-inline: 5px;
@@ -210,12 +232,15 @@
 
 		.title-row {
 			display: flex;
+			align-items: center;
 		}
 		
 		.title-row p {
 			white-space: nowrap;
 			margin-bottom: 0 !important;
 			font-size: 10px;
+			margin-top: 0;
+
 		}
 		.title-row 	span, a {
 			margin-inline: 5px;
@@ -228,17 +253,18 @@
 		.detail-row-1 p {
 			white-space: nowrap;
 			margin-bottom: 0 !important;
-			font-size: 18px;
+			font-size: 16px;
+			margin-top: 0;
 		}
 		.detail-row-1 span {
 			margin-inline: 5px;
-			font-size: 22px;
+			font-size: 16px;
 
 		}
 		
 		.bordered{
 			border: 1px solid #666666;
-			padding: 6px;
+			padding: 4px;
 		}
 
 		/*----- pages -----*/
@@ -376,7 +402,7 @@
 
 		
 		.cause{
-			width: 100%;
+			/*width: 100%;*/
 		}
 		.cause p{
 			margin-bottom: 6px !important;
@@ -554,7 +580,7 @@
 					</div>
 					
 					<div class="table-view">
-						<table class="table table-bordered" border="2">
+						<table class="table" border="1">
 							<thead>
 							<tr>
 								<th scope="col" width="6%">ردیف</th>
@@ -594,7 +620,7 @@
 						</table>
 					</div>
 					
-					<div class="row mb-1">
+					<div class="row">
 						<div class="col-6 col-md-6">
 							<div class="bordered">
 								<p>گیرنده:</p>
@@ -642,7 +668,7 @@
 							</div>
 						</div>
 						
-						<div class="col-6 col-md-6">
+						<div class="col-6 col-md-6" style="margin-bottom: 16px">
 							<div class="signature bordered">
 								<div>
 									<p>محل ضرب مهر فروشگاه:</p>
@@ -662,11 +688,10 @@
 								</span>
 							</div>
 						</div>
-					
 					</div>
 					
 					<div class="row">
-						<div class="col-6 col-md-6 d-flex align-items-stretch">
+						<div class="col-6 col-md-6">
 							<div class="cause bordered">
 								<p>علت برگشتی:</p>
 								
@@ -855,10 +880,23 @@
 		</div>
 	</div>
 	
-	<script type="module" src="./js/bootstrap/bootstrap.min.js"></script>
-	<script type="module" src="./js/bootstrap/bootstrap.bundle.min.js"></script>
-	<script type="module" src="./js/bootstrap/bootstrap.esm.min.js"></script>
-	<script type="text/javascript" src="./js/main.js"></script>
+	
+	<script type="text/javascript">
+    const price = document.getElementsByClassName('price')
+
+    for (var i = 0; i < price.length; i++) {
+      if (price[i].innerText && price[i].innerText != 'undefined') {
+        const str = price[i].innerText?.toString()?.split(".");
+        if (str[0]?.length >= 4) {
+          str[0] = str[0]?.replace(/(\d)(?=(\d{3})+$)/g, "$1.");
+        }
+        if (str[1] && str[1]?.length >= 5) {
+          str[1] = str[1]?.replace(/(\d{3})/g, "$1 ");
+        }
+        document.getElementsByClassName('price')[i].innerHTML=str.join(",")
+      }
+    }
+	</script>
 
 </body>
 </html>

@@ -5,15 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ماهکس</title>
 	
-	<!--	<link href="./style/scss/main.css" type="text/css" rel="stylesheet">-->
-	<link href="./style/bootstrap/bootstrap.min.css" type="text/css" rel="stylesheet">
-	<link href="./style/bootstrap/bootstrap-grid.min.css" type="text/css" rel="stylesheet">
-	<link href="./style/bootstrap/bootstrap-grid.rtl.min.css" type="text/css" rel="stylesheet">
-	<link href="./style/bootstrap/bootstrap-reboot.min.css" type="text/css" rel="stylesheet">
-	<link href="./style/bootstrap/bootstrap-reboot.rtl.min.css" type="text/css" rel="stylesheet">
-	<link href="./style/bootstrap/bootstrap-utilities.min.css" type="text/css" rel="stylesheet">
-	<link href="./style/bootstrap/bootstrap-utilities.rtl.min.css" type="text/css" rel="stylesheet">
-	
 	<style type="text/css">
 		/*----- global -----*/
 		::-moz-selection{ /* Code for Firefox */
@@ -102,7 +93,7 @@
 			font-family: "I_sans_medium", sans-serif;
 			color: #333333;
 			font-size: 10px;
-
+			margin-top: 0;
 		}
 
 		span, a, label{
@@ -112,31 +103,34 @@
 			font-size: 8px;
 
 		}
-		
+
 		table{
 			font-family: "I_sans_regular", sans-serif;
 			font-size: 10px;
 			margin-bottom: 6px !important;
+			width: 100%;
+			text-align: center;
 		}
 
 		table thead tr th{
 			background: #cccccc !important;
-			padding: 2px !important;
+			padding: 1px !important;
 		}
-		
+
 		table tbody tr th{
-			padding: 2px !important;
+			padding: 1px !important;
 		}
 
 		table tbody tr td{
-			padding: 2px !important;
+			padding: 1px !important;
 		}
+
 		table tfoot tr th{
-			padding: 2px !important;
+			padding: 1px !important;
 		}
 
 		table tfoot tr td{
-			padding: 2px !important;
+			padding: 1px !important;
 		}
 
 		h1, h2, h3, h4, h5, h6{
@@ -169,9 +163,37 @@
 			font-family: "I_sans_regular", sans-serif;
 		}
 
+		.row{
+			display: flex;
+		}
+
+		.col{
+			width: 100%;
+			margin-inline: 6px;
+			margin-bottom: 6px;
+		}
+
+		.row .col-12{
+			width: 100%;
+			margin-inline: 6px;
+			margin-bottom: 6px;
+		}
+
+		.row .col-6{
+			width: 100%;
+			margin-inline: 6px;
+			margin-bottom: 6px;
+		}
+
+		.row .col-4{
+			width: 100%;
+			margin-inline: 6px;
+			margin-bottom: 6px;
+		}
 
 		.detail-row{
 			display: flex;
+			align-items: center;
 		}
 
 		.detail-row p{
@@ -187,12 +209,36 @@
 
 		.bordered{
 			border: 1px solid #666666;
-			padding: 6px;
+			padding: 4px;
 		}
 
 		/*----- pages -----*/
 		.template{
 			padding: 20px 0;
+		}
+
+		.d-mahex-none{
+			display: none;
+		}
+
+		.d-mahex-block{
+			display: block;
+		}
+
+		.d-chapar-none{
+			display: none;
+		}
+
+		.d-chapar-block{
+			display: block;
+		}
+
+		.d-kbk-none{
+			display: none;
+		}
+
+		.d-kbk-block{
+			display: block;
 		}
 
 		.template .img{
@@ -204,7 +250,7 @@
 		}
 
 		.template .header{
-			margin-bottom: 6px;
+			/*margin-bottom: 6px;*/
 		}
 
 		.template .header .col-4{
@@ -222,28 +268,41 @@
 			align-items: flex-end;
 		}
 
-		.template	.attention{
+		.template .attention{
 			margin-bottom: 6px;
 		}
-		
+
 		.template .barcode{
-			margin-top: 6px;
+			margin-top: 4px;
 		}
+
 		.template .barcode .temp{
-			margin-bottom: 6px;
+			margin-bottom: 4px;
 		}
-		
+		.template .barcode p{
+			margin-bottom: 0 !important;
+		}
+
 		.template .table-view{
 			margin-top: 6px;
 		}
+
 		.template .table-view .title{
 			display: flex;
-			margin-bottom: 6px;
+			align-items: baseline;
+			/*margin-bottom: 4px;*/
 		}
+
 		.template .table-view .title .detail-row{
 			margin-inline: 10px;
 		}
 		
+		.details{
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
+	
 	</style>
 
 </head>
@@ -270,13 +329,13 @@
 						</div>
 					</div>
 					<div class="col-4 col-md-4">
-						<div class="img">
+						<div class="img d-mahex-block">
 							<img src="./img/mahex.png" alt="mahex">
 						</div>
-						<div class="img d-none">
+						<div class="img d-chapar-none">
 							<img src="./img/chapar.png" alt="chapar">
 						</div>
-						<div class="img d-none">
+						<div class="img d-kbk-none">
 							<img src="./img/kbk.png" alt="kbk">
 						</div>
 					</div>
@@ -387,7 +446,7 @@
 					</div>
 					
 					
-					<table class="table table-bordered">
+					<table class="table table-bordered" border="1">
 						<thead>
 						<tr>
 							<th scope="col" width="8%">ردیف</th>
@@ -439,7 +498,7 @@
 					</div>
 					
 					
-					<table class="table table-bordered">
+					<table class="table table-bordered" border="1">
 						<thead>
 						<tr>
 							<th scope="col" width="8%">ردیف</th>
@@ -513,26 +572,18 @@
 				
 				
 				<div class="details bordered">
-					<div class="row">
-						<div class="col-4 col-md-4">
-							<div class="detail-row">
-								<p>وزن:</p>
-								<span id="Weight">[Weight] گرم</span>
-							</div>
+						<div class="detail-row">
+							<p>وزن:</p>
+							<span id="Weight">[Weight] گرم</span>
 						</div>
-						<div class="col-4 col-md-4">
-							<div class="detail-row">
-								<p>محتویات:</p>
-								<span>دو کتاب و یک لیبل فلزی</span>
-							</div>
+						<div class="detail-row">
+							<p>محتویات:</p>
+							<span>دو کتاب و یک لیبل فلزی</span>
 						</div>
-						<div class="col-4 col-md-4">
-							<div class="detail-row">
-								<p>ابعاد:</p>
-								<span>2*22*23</span>
-							</div>
+						<div class="detail-row">
+							<p>ابعاد:</p>
+							<span>2*22*23</span>
 						</div>
-					</div>
 				</div>
 				
 				<div class="table-view">
@@ -547,7 +598,7 @@
 					</div>
 					
 					
-					<table class="table table-bordered">
+					<table class="table table-bordered" border="1">
 						<thead>
 						<tr>
 							<th scope="col">ایجاد شده در</th>
@@ -582,10 +633,22 @@
 	
 	</div>
 	
-	
-	<script type="module" src="./js/bootstrap/bootstrap.min.js"></script>
-	<script type="module" src="./js/bootstrap/bootstrap.bundle.min.js"></script>
-	<script type="module" src="./js/bootstrap/bootstrap.esm.min.js"></script>
-	<script type="text/javascript" src="./js/main.js"></script>
+	<script type="text/javascript">
+    const price = document.getElementsByClassName('price')
+
+    for (var i = 0; i < price.length; i++) {
+      if (price[i].innerText && price[i].innerText != 'undefined') {
+        const str = price[i].innerText?.toString()?.split(".");
+        if (str[0]?.length >= 4) {
+          str[0] = str[0]?.replace(/(\d)(?=(\d{3})+$)/g, "$1.");
+        }
+        if (str[1] && str[1]?.length >= 5) {
+          str[1] = str[1]?.replace(/(\d{3})/g, "$1 ");
+        }
+        document.getElementsByClassName('price')[i].innerHTML = str.join(",")
+      }
+    }
+	</script>
+
 </body>
 </html>
