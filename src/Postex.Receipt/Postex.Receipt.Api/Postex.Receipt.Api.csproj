@@ -33,6 +33,9 @@
     <None Update="libwkhtmltox.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Templates\Service.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Templates\_Header.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

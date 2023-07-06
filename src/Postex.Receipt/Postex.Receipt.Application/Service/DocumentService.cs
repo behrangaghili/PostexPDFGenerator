@@ -43,8 +43,8 @@ namespace Postex.Receipt.Application
             globalSettings.ColorMode = ColorMode.Color;
           
             globalSettings.Orientation = Orientation.Portrait;
-            globalSettings.PaperSize = PaperKind.Letter;
-            globalSettings.Margins = new MarginSettings { Top = 1, Bottom = 1, Left = .5, Right = .5, Unit = Unit.Inches };
+            globalSettings.PaperSize = PaperKind.A5;
+            globalSettings.Margins = new MarginSettings { Top = 0.2, Bottom = 0.2, Left = 0.2, Right = 0.2, Unit = Unit.Inches };
 
             return globalSettings;
         }
