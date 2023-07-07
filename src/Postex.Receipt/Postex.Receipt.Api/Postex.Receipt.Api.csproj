@@ -36,6 +36,9 @@
     <None Update="Templates\Service.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Templates\test.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Templates\_Header.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
