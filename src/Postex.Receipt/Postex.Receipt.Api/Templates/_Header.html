@@ -478,12 +478,19 @@
                     display: inline-block;
                     width: 33%;
                 }
+
+            #Rotate {
+                -ms-writing-mode: tb-rl;
+                -webkit-writing-mode: vertical-rl;
+                writing-mode: vertical-rl;
+                transform: rotate(180deg);
+                white-space: nowrap;
+                font-family: 'Code 128';
+                font-size: 50px;
+            }
         </style>
 
 
- <!--       <script>
-            document.getElementById("barcode-vertical").style.transform = "rotate(90deg)";
-        </script>-->
 
 
     </head>
