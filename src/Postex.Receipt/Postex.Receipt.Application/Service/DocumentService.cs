@@ -73,6 +73,7 @@ namespace Postex.Receipt.Application
             headerSettings.Right = "Page [page] of [toPage]";
             headerSettings.Left = "پستکس";
             headerSettings.Line = true;
+           // headerSettings.HtmUrl = "postex.ir";
 
             return headerSettings;
         }
@@ -81,8 +82,8 @@ namespace Postex.Receipt.Application
         {
             footerSettings.FontSize = 5;
             footerSettings.FontName = "Times New Roman";
-            footerSettings.Center = "Revision As Of August 2021";
-            footerSettings.Line = true;
+            footerSettings.Center = "نسخه بهار 1402";
+           // footerSettings.HtmUrl = "postex.ir";
             return footerSettings;
         }
     }

@@ -5,7 +5,7 @@ using Postex.receipt.Application.Configuration;
 using Postex.receipt.Infrastrucre.Configuration;
 using Postex.Receipt.Application;
 using Serilog;
-
+using Postex.SharedKernel.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -52,6 +52,7 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+app.UseCustomExceptionHandler();
 app.UseStaticFiles();
 app.UseHttpsRedirection();
 

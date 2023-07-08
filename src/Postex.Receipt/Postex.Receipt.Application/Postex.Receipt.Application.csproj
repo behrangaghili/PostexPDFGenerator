@@ -39,10 +39,4 @@
     </Reference>
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="Helper\libwkhtmltox.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>
