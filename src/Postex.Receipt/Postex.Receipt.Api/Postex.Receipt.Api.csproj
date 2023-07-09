@@ -7,17 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Assets\breakableJSON.json" />
     <Content Remove="Assets\chaparJSON.json" />
-    <Content Remove="Assets\hJSON.json" />
     <Content Remove="Assets\InputPostJSON.json" />
     <Content Remove="Assets\InputServicesJSON.json" />
     <Content Remove="Assets\kbkJSON.json" />
-    <Content Remove="Assets\liquidJSON.json" />
     <Content Remove="Assets\mahexJSON.json" />
     <Content Remove="Assets\PostSampleJSONAllConditionFalse.json" />
     <Content Remove="Assets\PostSampleJSONAllConditionTrues.json" />
-    <Content Remove="Assets\vijeJSON.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -44,17 +40,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Assets\breakableJSON.json" />
     <None Include="Assets\chaparJSON.json" />
-    <None Include="Assets\hJSON.json" />
     <None Include="Assets\InputPostJSON.json" />
     <None Include="Assets\InputServicesJSON.json" />
     <None Include="Assets\kbkJSON.json" />
-    <None Include="Assets\liquidJSON.json" />
     <None Include="Assets\mahexJSON.json" />
     <None Include="Assets\PostSampleJSONAllConditionFalse.json" />
     <None Include="Assets\PostSampleJSONAllConditionTrues.json" />
-    <None Include="Assets\vijeJSON.json" />
   </ItemGroup>
 
   <ItemGroup>
