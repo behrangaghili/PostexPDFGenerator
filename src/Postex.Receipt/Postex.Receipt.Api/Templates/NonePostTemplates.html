@@ -1,9 +1,9 @@
 ﻿<div class="template">
-    <div class="header">
+    <div class="header header-service">
         <div class="">
             <div class="detail-row-2">
                 <p>شماره درخواست:</p>
-                <span id="OrderId">[OrderId]</span>
+                <span id="RequestNo">[RequestNo]</span>
             </div>
             <div class="detail-row-2">
                 <p>شماره محموله:</p>
@@ -11,7 +11,7 @@
             </div>
             <div class="detail-row-2">
                 <p>تاریخ ارجاع:</p>
-                <span id="ReadyConfirmDateTime">[ReadyConfirmDateTime]</span>
+                <span id="ReadyConfirmDateTime">[ReferralDate]</span>
             </div>
         </div>
         <div class="">
@@ -35,7 +35,7 @@
     <div class="body">
         <div class="s1">
             <div class="">
-                <div class="attention bordered">
+                <div class="bordered" style="margin-bottom: 6px">
                     <div class="detail-row">
                         <p>پستچی محترم:</p>
                         <span>مبلغ مرسوله تسویه شده لطفا از گرفتن هرگونه وجه خودداری نمایید</span>
@@ -48,63 +48,82 @@
                 </div>
                 <div class="bordered">
 
-                    <div class="detail-row-2">
+                    <div class="detail-row">
                         <p>گیرنده:</p>
                         <span id="ReciverFullName">[ReciverFullName]</span>
                     </div>
-                    <div class="detail-row-2">
-                        <p>تلفن:</p>
-                        <span id="ReciverPhoneNo">[ReciverPhoneNo]</span>
+
+                    <div class="row-item">
+                        <div class="detail-row">
+                            <p>استان:</p>
+                            <span id="ReceiverProvince">[ReceiverProvince]</span>
+                        </div>
+                        <div class="detail-row">
+                            <p>شهر:</p>
+                            <span id="ReceiverCity">[ReceiverCity]</span>
+                        </div>
                     </div>
-                    <div class="detail-row-2">
-                        <p>استان و شهر:</p>
-                        <span id="Destination">[Destination]</span>
-                    </div>
-                    <div class="detail-row-2">
+
+                    <div class="detail-row">
                         <p>آدرس:</p>
                         <span id="ReciverAddress">[ReciverAddress]</span>
                     </div>
-                    <div class="detail-row-2">
-                        <p>کدپستی:</p>
-                        <span id="ReciverPostCode">[ReciverPostCode]</span>
+
+                    <div class="row-item">
+                        <div class="detail-row">
+                            <p>کدپستی:</p>
+                            <span id="ReciverPostCode">[ReciverPostCode]</span>
+                        </div>
+                        <div class="detail-row">
+                            <p>تلفن:</p>
+                            <span id="ReciverPhoneNo">[ReciverPhoneNo]</span>
+                        </div>
                     </div>
 
                 </div>
             </div>
             <div class="">
                 <div class="bordered">
-                    <div class="detail-row-2">
+                    <div class="detail-row">
                         <p>فرستنده:</p>
                         <span id="StoreName">[StoreName]</span>
                     </div>
-                    <div class="detail-row-2">
-                        <p>تلفن:</p>
-                        <span id="StorePhoneNo">[StorePhoneNo]</span>
+
+                    <div class="row-item">
+                        <div class="detail-row">
+                            <p>استان:</p>
+                            <span id="SenderProvince">[SenderProvince]</span>
+                        </div>
+                        <div class="detail-row">
+                            <p>شهر:</p>
+                            <span id="SenderProvince">[SenderProvince]</span>
+                        </div>
                     </div>
-                    <div class="detail-row-2">
-                        <p>استان و شهر:</p>
-                        <span id="Source">[Source]</span>
-                    </div>
-                    <div class="detail-row-2">
+                    <div class="detail-row">
                         <p>آدرس:</p>
                         <span id="StoreAddress">[StoreAddress]</span>
                     </div>
-                    <div class="detail-row-2" style="margin-bottom: 8px">
-                        <p>کدپستی:</p>
-                        <span id="StorePostCode">[StorePostCode]</span>
+
+                    <div class="row-item">
+
+                        <div class="detail-row" style="margin-bottom: 8px">
+                            <p>کدپستی:</p>
+                            <span id="StorePostCode">[StorePostCode]</span>
+                        </div>
+                        <div class="detail-row">
+                            <p>تلفن:</p>
+                            <span id="StorePhoneNo">[StorePhoneNo]</span>
+                        </div>
                     </div>
 
-                    <!-- <div class="detail-row-1">
-                        <a href="#">http://postbar.ir/rahgiri</a>
-                    </div>-->
 
                     <div class="barcode">
                         <div class="temp">
-                            <span style="font-family:'Code 128';font-size:40px;">
-                                [Barcode]
+                            <span style="font-family:'Code 128';font-size:30px;">
+                                [BarcodeNo]
                             </span>
                         </div>
-                        <p id="barcodeNo">[Barcode]</p>
+                        <p id="barcodeNo">[BarcodeNo]</p>
                     </div>
 
                 </div>
@@ -135,15 +154,9 @@
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td id="ProductName">[ProductName]</td>
-                        <td>1</td>
-                        <td><span class="price">[IsSafeBuy]</span> ریال</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td id="_ProductName">[ProductName]</td>
-                        <td>1</td>
-                        <td><span class="price">[IsSafeBuy]</span> ریال</td>
+                        <td id="PostProductName">[PostProductName]</td>
+                        <td>[PostNumberOfItemsInShipment]</td>
+                        <td><span class="price">[PostItemPrice]</span> ریال</td>
                     </tr>
 
                 </tbody>
@@ -152,7 +165,7 @@
                     <tr>
                         <th colspan="2"></th>
                         <td>جمع کل</td>
-                        <td><span class="price" id="Eng_Kala_Price">[Eng_Kala_Price]</span> ریال</td>
+                        <td><span class="price" id="PostTotalPrice">[PostTotalPrice]</span> ریال</td>
                     </tr>
                 </tfoot>
             </table>
@@ -184,51 +197,9 @@
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>خدمات فنی مهندسی ، بازاریابی و پوششی</td>
-                        <td>1</td>
-                        <td><span class="price">570000</span> ریال</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>درخواست چاپ</td>
-                        <td>1</td>
-                        <td><span class="price">100000</span> ریال</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>بسته بندی</td>
-                        <td>1</td>
-                        <td><span class="price">100000</span> ریال</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>تضمین غرامت کال</td>
-                        <td>1</td>
-                        <td><span class="price">100000</span> ریال</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>طلاع رسانی پیامکی</td>
-                        <td>1</td>
-                        <td><span class="price">100000</span> ریال</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td>ثبت الکترونیک</td>
-                        <td>1</td>
-                        <td><span class="price">100000</span> ریال</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">7</th>
-                        <td>مالیات بر ارزش افزوده</td>
-                        <td>1</td>
-                        <td><span class="price">100000</span> ریال</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">8</th>
-                        <td>تخفیف</td>
-                        <td>1</td>
-                        <td><span class="price">100000</span> ریال</td>
+                        <td id="SupportProductName">[SupportProductName]</td>
+                        <td>[SupportNumberOfItemsInShipment]</td>
+                        <td><span class="price">[SupportItemPrice]</span> ریال</td>
                     </tr>
 
                 </tbody>
@@ -237,7 +208,7 @@
                     <tr>
                         <th colspan="2"></th>
                         <td>جمع کل</td>
-                        <td><span class="price">300000</span> ریال</td>
+                        <td><span class="price" id="SupportTotalPrice">[SupportTotalPrice]</span> ریال</td>
                     </tr>
                 </tfoot>
             </table>
@@ -252,11 +223,11 @@
             </div>
             <div class="detail-row">
                 <p>محتویات:</p>
-                <span>دو کتاب و یک لیبل فلزی</span>
+                <span>[Contents]</span>
             </div>
             <div class="detail-row">
                 <p>ابعاد:</p>
-                <span>2*22*23</span>
+                <span>[Dimensions]</span>
             </div>
         </div>
 
@@ -267,7 +238,7 @@
 
                 <div class="detail-row">
                     <p>کد پیگیری:</p>
-                    <span>2232154684</span>
+                    <span>[TrackingCode]</span>
                 </div>
             </div>
 
@@ -281,8 +252,8 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row" id="OrderDate">[OrderDate]</th>
-                        <td>صورت حساب با موفقیت پرداخت گردید</td>
+                        <th scope="row" id="CreateAt">[CreateAt]</th>
+                        <td>[StatusPayment]</td>
                     </tr>
                 </tbody>
             </table>

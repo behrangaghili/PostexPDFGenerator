@@ -12,6 +12,10 @@
     <Content Remove="Assets\InputServicesJSON.json" />
     <Content Remove="Assets\kbkJSON.json" />
     <Content Remove="Assets\mahexJSON.json" />
+    <Content Remove="Assets\NonePostSampleJSONConditionChapar.json" />
+    <Content Remove="Assets\NonePostSampleJSONConditionKBK.json" />
+    <Content Remove="Assets\NonePostSampleJSONConditionMahex.json" />
+    <Content Remove="Assets\OfficialSampleJSONCondition.json" />
     <Content Remove="Assets\PostSampleJSONAllConditionFalse.json" />
     <Content Remove="Assets\PostSampleJSONAllConditionTrues.json" />
   </ItemGroup>
@@ -45,6 +49,10 @@
     <None Include="Assets\InputServicesJSON.json" />
     <None Include="Assets\kbkJSON.json" />
     <None Include="Assets\mahexJSON.json" />
+    <None Include="Assets\OfficialSampleJSONCondition.json" />
+    <None Include="Assets\NonePostSampleJSONConditionKBK.json" />
+    <None Include="Assets\NonePostSampleJSONConditionChapar.json" />
+    <None Include="Assets\NonePostSampleJSONConditionMahex.json" />
     <None Include="Assets\PostSampleJSONAllConditionFalse.json" />
     <None Include="Assets\PostSampleJSONAllConditionTrues.json" />
   </ItemGroup>
@@ -57,6 +65,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Templates\NonePostTemplates.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\OfficialTemplates.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Templates\PostTemplates.html">

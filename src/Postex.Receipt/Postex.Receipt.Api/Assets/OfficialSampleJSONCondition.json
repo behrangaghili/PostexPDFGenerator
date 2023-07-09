@@ -1,0 +1,45 @@
+[
+  {
+    "templateName": "OfficialTemplates",
+    "values": {
+      "Number": "123456789",
+      "OederDate": "1402/01/01",
+      "DueDate": "1402/01/01",
+
+      "SellerName": "شرکت معماران بهطرح",
+      "SellerEconomicCode": "411478563254",
+      "SellerRegisterNo": "175632",
+      "SellerCountry": "ایران ",
+      "SellerProvince": "تهران ",
+      "SellerCity": "تهران",
+      "SellerAddress": "بلوار شهید سباری (آجودانیه) , بالاتر از پارک شطرنج بین خ بهزاد و خ هفتم ، برج ستاره آجودانیه، پلاک ۳۸ ط 2",
+      "SellerPostCode": "1661154885",
+      "SellerNationalId": "101022220090",
+      "SellerPhone": "09121111111",
+
+      "BuyerName": "نوآوران حمل و نقل چابک",
+      "BuyerEconomicCode": "411478563254",
+      "BuyerRegisterNo": "175632",
+      "BuyerCountry": "ایران ",
+      "BuyerProvince": "تهران ",
+      "BuyerCity": "تهران",
+      "BuyerAddress": "بلوار شهید سباری (آجودانیه) , بالاتر از پارک شطرنج بین خ بهزاد و خ هفتم ، برج ستاره آجودانیه، پلاک ۳۸ ط 2",
+      "BuyerPostCode": "1661154885",
+      "BuyerNationalId": "101022220090",
+      "BuyerPhone": "09121111111",
+
+      "ProductName": "00002 - تمبر مجازی حمل و نقل پستی - آبان ماه",
+      "NumberOfItemsInShipment": "437",
+      "UnitOfItemsInShipment": "عدد",
+      "ItemPrice": "1،000،000",
+      "ItemsWholePriceWithOutDisCount": "10,000,000",
+      "ItemDisCount": "0",
+      "ItemTax": "0",
+      "ItemsWholePriceWithDisCount": "10,000,000",
+      "TotalPrice": "12,000,000",
+      "TotalPriceLetters": "دوازده میلیون ریال",
+      "TotalNumberOfItemsInShipment": "437",
+      "CashPayment": ""
+    }
+  }
+]
