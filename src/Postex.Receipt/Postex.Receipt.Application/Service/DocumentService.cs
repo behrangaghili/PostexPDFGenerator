@@ -44,7 +44,7 @@ namespace Postex.Receipt.Application
           
             globalSettings.Orientation = Orientation.Portrait;
             globalSettings.PaperSize = PaperKind.A5;
-            globalSettings.Margins = new MarginSettings { Top = 0.2, Bottom = 0.2, Left = 0.2, Right = 0.2, Unit = Unit.Inches };
+            globalSettings.Margins = new MarginSettings { Top = 0.1, Bottom = 0.1, Left = 0.1, Right = 0.1, Unit = Unit.Inches };
 
             return globalSettings;
         }
@@ -68,11 +68,11 @@ namespace Postex.Receipt.Application
 
         private HeaderSettings HeaderSettings()
         {
-            headerSettings.FontSize = 6;
+/*            headerSettings.FontSize = 6;
             headerSettings.FontName = "Times New Roman";
             headerSettings.Right = "Page [page] of [toPage]";
-            headerSettings.Left = "پستکس";
-            headerSettings.Line = true;
+            headerSettings.Left = "پستکس";*/
+            /*headerSettings.Line = false;*/
            // headerSettings.HtmUrl = "postex.ir";
 
             return headerSettings;
@@ -80,10 +80,12 @@ namespace Postex.Receipt.Application
 
         private FooterSettings FooterSettings()
         {
-            footerSettings.FontSize = 5;
+/*            footerSettings.FontSize = 5;
             footerSettings.FontName = "Times New Roman";
-            footerSettings.Center = "نسخه بهار 1402";
-           // footerSettings.HtmUrl = "postex.ir";
+            footerSettings.Center = "نسخه بهار 1402";*/
+            // footerSettings.HtmUrl = "postex.ir";
+/*            footerSettings.Line = false;
+*/
             return footerSettings;
         }
     }

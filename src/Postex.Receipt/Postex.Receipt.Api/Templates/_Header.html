@@ -5,14 +5,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>پست</title>
-      
+
         <style type="text/css">
 
 
             p {
                 margin-bottom: 0px !important;
                 font-family: "Vazir", Tahoma;
-                font-size: 14px;
+                font-size: 11px;
                 margin-top: 0;
                 display: inline-block;
             }
@@ -20,7 +20,7 @@
             span, a, label {
                 font-family: "Vazir", Tahoma;
                 text-align: right;
-                font-size: 12px;
+                font-size: 10px;
                 display: inline-block;
             }
 
@@ -31,11 +31,8 @@
                 text-align: center;
                 border-spacing: 0;
                 border: 1px solid #cccccc;
-                /*margin-inline: 6px;*/
             }
 
-            thead tr th {
-            }
 
 
             tr th {
@@ -43,6 +40,7 @@
                 padding: 2px !important;
                 border-top-width: 0;
                 border-right-width: 0;
+                font-size: 11px;
             }
 
             tr td {
@@ -50,6 +48,7 @@
                 padding: 2px !important;
                 border-top-width: 0;
                 border-right-width: 0;
+                font-size: 11px;
             }
 
             h1, h2, h3, h4, h5, h6 {
@@ -65,12 +64,14 @@
             }
 
                 .detail-row p {
-                    white-space: nowrap;
                     margin-bottom: 0 !important;
+                    font-weight: bold;
+                    display: inline;
                 }
 
                 .detail-row span {
-                    margin-inline: 5px;
+                    margin-right: 5px;
+                    display: inline;
                 }
 
             .detail-row-1 {
@@ -93,13 +94,15 @@
                 display: block;
             }
 
-                .detail-row p {
-                    white-space: nowrap;
+                .detail-row-2 p {
                     margin-bottom: 0 !important;
+                    display: inline;
+                    font-weight: bold;
                 }
 
-                .detail-row span {
+                .detail-row-2 span {
                     margin-inline: 5px;
+                    display: inline;
                 }
 
             .title-big-row {
@@ -113,6 +116,7 @@
                     font-size: 12px;
                     margin-top: 0;
                 }
+
                 .title-big-row h5 {
                     white-space: nowrap;
                     margin-bottom: 0 !important;
@@ -129,7 +133,6 @@
             .title-row {
                 display: flex;
                 align-items: center;
-             
             }
 
                 .title-row p {
@@ -152,7 +155,6 @@
                     margin-bottom: 0 !important;
                     font-size: 16px;
                     margin-top: 0;
-                   
                 }
 
                 .detail-row-1 span {
@@ -169,7 +171,7 @@
                 margin-bottom: 8px !important;
             }
 
-            .row-item{
+            .row-item {
                 display: block;
             }
             /*----- pages -----*/
@@ -234,8 +236,22 @@
                 display: block !important;
             }
 
-            .table-opacity{
-                opacity: 0.5;
+
+            .table-opacity th {
+                font-size: 8px !important;
+                color: #808080;
+                border-color: #808080 !important;
+            }
+
+            .table-opacity td {
+                font-size: 8px !important;
+                color: #808080;
+                border-color: #808080 !important;
+            }
+
+            .table-opacity th span {
+                font-size: 8px !important;
+                color: #808080;
             }
 
             .img {
@@ -249,42 +265,61 @@
                     margin-left: 10px;
                 }
 
+
             .header {
-                /*margin-bottom: 6px;*/
                 display: block;
-                /*width: 100%;*/
                 border-radius: 10px;
             }
-
-                .header .title-big-row, .title-row {
-                    justify-content: center;
-                }
-
-                .header .title-big-row {
-                    margin-bottom: 5px;
-                }
-
-                .header .title-row {
-                    margin-bottom: 5px;
-                }
 
                 .header > div {
                     display: inline-block;
                     vertical-align: middle;
-                    width: 32%;
                 }
 
-                    .header > div:nth-child(1) {
-                    }
+            .header-service {
+                margin-bottom: 16px;
+            }
 
-                    .header > div:nth-child(2) {
-                        margin: auto;
+                .header-service > div {
+                    width: 32%;
+                    margin: auto;
+                }
+
+                    .header-service > div:nth-child(2) {
                         text-align: center;
                     }
 
-                    .header > div:nth-child(3) {
+                    .header-service > div:nth-child(3) {
                         text-align: left;
                     }
+
+            .header-post .title-big-row, .title-row {
+                justify-content: center;
+            }
+
+            .header-post .title-big-row {
+                margin-bottom: 3px;
+            }
+
+            .header-post .title-row {
+                margin-bottom: 2px;
+            }
+
+
+            .header-post > div:nth-child(1) {
+                width: 20%;
+            }
+
+            .header-post > div:nth-child(2) {
+                width: 34%;
+                margin: auto;
+                text-align: center;
+            }
+
+            .header-post > div:nth-child(3) {
+                width: 45%;
+                text-align: left;
+            }
 
             .s1, .s2, .s3 {
                 display: block;
@@ -296,22 +331,26 @@
                     vertical-align: top;
                 }
 
-                .s3 .img{
+                .s3 .img {
                     width: 100%;
                     text-align: center;
                     margin: auto;
                 }
 
-                .s2{
-                    margin-bottom: 8px;
-                    padding-bottom: 8px;
-                    border-bottom: 1px dashed #333333;
-                }
+                    .s3 .img img {
+                        width: 60%;
+                    }
 
-                .barcode {
-                    display: inline-block;
-                    text-align: center;
-                }
+            .s2 {
+                margin-bottom: 8px;
+                padding-bottom: 8px;
+                border-bottom: 1px dashed #333333;
+            }
+
+            .barcode {
+                display: inline-block;
+                text-align: center;
+            }
 
                 .barcode > div {
                     display: inline-block;
@@ -329,12 +368,18 @@
                     margin-bottom: 0;
                 }
 
+            .info-product {
+                position: absolute;
+                top: -50px;
+                right: 5px
+            }
+
             .barcode-header {
                 margin-top: 6px;
             }
 
                 .barcode-header .temp {
-                    margin-bottom: 6px;
+                    /*margin-bottom: 6px;*/
                     display: block !important;
                 }
 
@@ -345,6 +390,7 @@
             .table-view {
                 margin-top: 6px;
                 margin-bottom: 16px;
+                position: relative;
             }
 
                 .table-view .title {
@@ -359,7 +405,7 @@
 
             .signature {
                 display: block;
-                height: 95px;
+                height: 120px;
                 position: relative;
                 margin-bottom: 4px;
                 border: 1px solid #666666;
@@ -372,10 +418,11 @@
                     text-align: center;
                     height: 90%;
                 }
-                .signature > div:first-child {
-                    border-left: 1px dashed #f1f1f1;
-                }
-  
+
+                    .signature > div:first-child {
+                        border-left: 1px dashed #f1f1f1;
+                    }
+
 
 
             .cost span {
@@ -424,33 +471,34 @@
 
 
                 .post-melli .info {
-                   position: relative;
+                    position: relative;
+                    margin-bottom: -10px;
                 }
 
-                .post-melli .info > div {
-                    display: inline-block;
-                    vertical-align: middle;
-                    
-                }
-
-                    .post-melli .info > div:nth-child(1) {
-                        width: 100%;
-                        text-align: center;
-                        margin:auto;
+                    .post-melli .info > div {
+                        display: inline-block;
+                        vertical-align: middle;
                     }
 
-                    .post-melli .info > div:nth-child(2) {
-                        text-align: center;
-                       position: absolute;
-                       left: 5px;
-                       top: 5px;
-                    }
+                        .post-melli .info > div:nth-child(1) {
+                            width: 100%;
+                            text-align: center;
+                            margin: auto;
+                        }
+
+                        .post-melli .info > div:nth-child(2) {
+                            text-align: center;
+                            position: absolute;
+                            left: 5px;
+                            top: 5px;
+                        }
 
 
                 .post-melli .img-status {
                     margin: auto;
                     width: 20px;
                     display: inline-block;
+                    margin-right: 5px;
                 }
 
                     .post-melli .img-status img {
@@ -471,7 +519,7 @@
                 }
 
                 .post-melli table {
-                    margin-bottom: 0 !important;
+                    margin-bottom: -10px !important;
                     width: 90%;
                 }
 
@@ -482,7 +530,7 @@
 
             .barcode-vertical {
                 position: absolute;
-                top: 35%;
+                top: 30%;
                 left: 10px;
                 margin: auto;
                 -ms-writing-mode: tb-rl;
@@ -492,7 +540,7 @@
                 white-space: nowrap;
             }
 
-            .barcode-horizontal{
+            .barcode-horizontal {
                 width: 100% !important
             }
 
@@ -509,8 +557,11 @@
             }
 
                 ._details .detail-row {
-                    display: inline-block;
+                    display: inline;
                     width: 33%;
+                }
+                ._details > div:nth-child(2) {
+                   padding-inline: 16px;
                 }
 
             .desc {
@@ -524,11 +575,15 @@
 
 
 
-            .form-empty{
-                padding: 6px;
+            .form-empty {
+                padding: 3px;
                 border-radius: 10px;
-                min-height: 10px;
-                margin-bottom: 8px;
+                border: 1px solid #000;
+            }
+
+
+            .cut {
+                border-bottom: 1px dashed #000;
             }
         </style>
 

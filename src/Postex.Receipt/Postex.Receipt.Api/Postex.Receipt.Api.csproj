@@ -15,6 +15,9 @@
     <Content Remove="Assets\kbkJSON.json" />
     <Content Remove="Assets\liquidJSON.json" />
     <Content Remove="Assets\mahexJSON.json" />
+    <Content Remove="Assets\NonePostSampleJSONConditionChapar.json" />
+    <Content Remove="Assets\NonePostSampleJSONConditionKBK.json" />
+    <Content Remove="Assets\NonePostSampleJSONConditionMahex.json" />
     <Content Remove="Assets\PostSampleJSONAllConditionFalse.json" />
     <Content Remove="Assets\PostSampleJSONAllConditionTrues.json" />
     <Content Remove="Assets\vijeJSON.json" />
@@ -52,6 +55,9 @@
     <None Include="Assets\kbkJSON.json" />
     <None Include="Assets\liquidJSON.json" />
     <None Include="Assets\mahexJSON.json" />
+    <None Include="Assets\NonePostSampleJSONConditionKBK.json" />
+    <None Include="Assets\NonePostSampleJSONConditionChapar.json" />
+    <None Include="Assets\NonePostSampleJSONConditionMahex.json" />
     <None Include="Assets\PostSampleJSONAllConditionFalse.json" />
     <None Include="Assets\PostSampleJSONAllConditionTrues.json" />
     <None Include="Assets\vijeJSON.json" />
