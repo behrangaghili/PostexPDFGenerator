@@ -1,0 +1,241 @@
+﻿<div class="template">
+    <div class="header section header-official">
+        <div class="">
+            <div class="detail-row-2">
+                <p>شماره:</p>
+                <span id="Number">[Number]</span>
+            </div>
+            <div class="detail-row-2">
+                <p>تاریخ:</p>
+                <span id="OederDate">[OederDate]</span>
+            </div>
+            <div class="detail-row-2">
+                <p>تاریخ سررسید:</p>
+                <span id="DueDate">[DueDate]</span>
+            </div>
+        </div>
+
+        <div>
+            <div class="title-big-row">
+                <p>شرکت معماران بهطرح</p>
+            </div>
+            <div class="title-big-row">
+                <p>فاکتور فروش</p>
+            </div>
+        </div>
+
+    </div>
+ 
+
+    <div class="body">
+        <div class="official-card bordered">
+            <div class="label">
+                <p>فروشنده</p>
+            </div>
+
+            <div class="card-info">
+                <div>
+                    <div>
+                        <div class="detail-row">
+                            <p>فروشنده:</p>
+                            <span>[SellerName]</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="detail-row">
+                            <p>کد اقتصادی:</p>
+                            <span>[SellerEconomicCode]</span>
+                        </div>
+
+                        <div class="detail-row">
+                            <p>شماره ثبت:</p>
+                            <span>[SellerRegisterNo]</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <div class="detail-row">
+                            <p>کشور:</p>
+                            <span>[SellerCountry]</span>
+                        </div>
+
+                        <div class="detail-row">
+                            <p>استان:</p>
+                            <span>[SellerProvince]</span>
+                        </div>
+
+                        <div class="detail-row">
+                            <p>شهر:</p>
+                            <span>[SellerCity]</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="detail-row">
+                            <p>کد پستی:</p>
+                            <span>[SellerPostCode]</span>
+                        </div>
+
+                        <div class="detail-row">
+                            <p>شناسه ملی:</p>
+                            <span>[SellerNationalId]</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="detail-row">
+                        <p>آدرس:</p>
+                        <span>[SellerAddress]</span>
+                    </div>
+                    <div class="detail-row">
+                        <p>تلفن:</p>
+                        <span>[SellerPhone]</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="official-card bordered">
+            <div class="label">
+                <p>خریدار</p>
+            </div>
+
+            <div class="card-info">
+                <div>
+                    <div>
+                        <div class="detail-row">
+                            <p>خریدار:</p>
+                            <span>[BuyerName]</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="detail-row">
+                            <p>کد اقتصادی:</p>
+                            <span>[BuyerEconomicCode]</span>
+                        </div>
+
+                        <div class="detail-row">
+                            <p>شماره ثبت:</p>
+                            <span>[BuyerRegisterNo]</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <div class="detail-row">
+                            <p>کشور:</p>
+                            <span>[BuyerCountry]</span>
+                        </div>
+
+                        <div class="detail-row">
+                            <p>استان:</p>
+                            <span>[BuyerProvince]</span>
+                        </div>
+
+                        <div class="detail-row">
+                            <p>شهر:</p>
+                            <span>[BuyerCity]</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="detail-row">
+                            <p>کد پستی:</p>
+                            <span>[BuyerPostCode]</span>
+                        </div>
+
+                        <div class="detail-row">
+                            <p>شناسه ملی:</p>
+                            <span>[BuyerNationalId]</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="detail-row">
+                        <p>آدرس:</p>
+                        <span>[BuyerAddress]</span>
+                    </div>
+                    <div class="detail-row">
+                        <p>تلفن:</p>
+                        <span>[BuyerPhone]</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="table-view">
+            <table class="table table-bordered" border="1">
+                <thead>
+                    <tr>
+                        <th scope="col" width="5%">#</th>
+                        <th scope="col" width="30%">شرح</th>
+                        <th scope="col">تعداد</th>
+                        <th scope="col">واحد</th>
+                        <th scope="col">مبلغ واحد(ريال)</th>
+                        <th scope="col">مبلغ(ريال)</th>
+                        <th scope="col">تخفیف(ريال)</th>
+                        <th scope="col">مالیات(ريال)</th>
+                        <th scope="col">مبلغ کل(ريال)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>[ProductName]</td>
+                        <td>[NumberOfItemsInShipment]</td>
+                        <td>[UnitOfItemsInShipment]</td>
+                        <td><span class="price">[ItemPrice]</span></td>
+                        <td><span class="price">[ItemsWholePriceWithOutDisCount]</span></td>
+                        <td><span class="price">[ItemDisCount]</span></td>
+                        <td><span class="price">[ItemTax]</span></td>
+                        <td><span class="price">[ItemsWholePriceWithDisCount]</span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+
+
+        <div class="official-footer">
+            <div>
+                <div class="title-big-row">
+                    <p>مبلغ کل:</p>
+                    <span>[TotalPriceLetters]</span>
+                </div>
+
+
+                <div class="title-big-row payment-type">
+                    <p>شرایط و نحوه فروش:</p>
+                    <span><span class="box"></span> نقدی</span>
+                    <span><span class="box"></span> غیرنقدی</span>
+                </div>
+            </div>
+
+
+            <div>
+                <div class="title-big-row">
+                    <p>تعداد:</p>
+                    <span>[TotalNumberOfItemsInShipment]</span>
+                </div>
+
+                <div class="title-big-row">
+                    <p>مبلغ کل:</p>
+                    <span> <span class="price">[TotalPrice]</span> ريال</span>
+                </div>
+            </div>
+
+        </div>
+
+
+
+</div>
